@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>blood pressure</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	</head>
+
+    <body>
+    <style>
+    body{
+   
+        background-image:url('/static/img/hand-writing-blood-pressure-withstethoskope-themometre-health-concept-background-hand-writing-blood-pressure-withstethoskope-194198656.jpg');
+        background-repeat:no-repeat;
+        background attachment:fixed;
+        background-size:cover;
+        }
+
+</style>
+        <!-- Website Title -->
+		<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Blood Pressure Predictor</span></h2>
+            <div class='description'>
+    			
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='danger'>OOPS! You Have Blood Pressure.</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='diabetes.webp') }}">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='safe'>GREAT! You Dont Have Blood Pressure.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='no-diabetes.webp') }}">
+			{% endif %}
+		</div>
+
+		
+
+	</body>
+</html>

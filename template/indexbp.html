@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Blood Pressure Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Blood Pressure Predictor</span></h2>
+            <div class='description'>
+    			
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('submit') }}" method="POST">
+                <input class="form-input" type="text" name="Patient_Number" placeholder="Patient Number eg. 1"><br>
+                <input class="form-input" type="text" name="LOHemoglobin" placeholder="Level_of_Hemoglobin eg.11"><br>
+                <input class="form-input" type="text" name="Age" placeholder="Age (mmHg) eg. 80"><br>
+                <input class="form-input" type="text" name="BMI" placeholder="BMI (mm) eg. 20"><br>
+                <input class="form-input" type="text" name="Sex" placeholder="Sex (IU/mL) eg. 1"><br>
+                <input class="form-input" type="text" name="Smoking" placeholder="Smoking (kg/m²) eg. 1"><br>
+                <input class="form-input" type="text" name="Physical_activity" placeholder="Physical_activity eg. 45961"><br>
+                <input class="form-input" type="text" name="salt_citd" placeholder="salt_content_in_the_diet eg. 7513"><br>
+                <input class="form-input" type="text" name="Level_of_Stress" placeholder="Level_of_Stress eg. 3"><br>
+                <input class="form-input" type="text" name="CKD" placeholder="Chronic_kidney_disease eg. 1"><br>
+                <input class="form-input" type="text" name="ATD" placeholder="Adrenal_and_thyroid_disorders eg. 1"><br>
+                
+        		<input type="submit" class="my-cta-button" value="submit">
+        	</form>
+    	</div>
+
+       
+
+    </body>
+</html>

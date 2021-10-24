@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel="stylesheet" href=" filename='../css/style.css'">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ </head>
+ <style>
+ body{
+   
+        background-image:url('/static/img/43412802-medicine-concept-stethoscope-pills-with-syringe-and-thermometer.jpg');
+        background-repeat:no-repeat;
+        background attachment:fixed;
+        background-size:cover;
+        }
+ </style>
+ <body style="background-color:#ccc;">
+ <div class="container">
+   <div class="row main">
+   <div class="main-login main-center">>
+  <div class="login-box" >
+  <div class="login-header">Login</div>
+  <div class="login-body">
+   <p>Please enter your username and password</p>
+   <form class="form-group" action="{{ url_for('login') }}" method="post">
+   
+   <div class="form-group">
+       <label for="username" class="cols-sm-2 control-label">Username</label>
+       <div class="cols-sm-10">
+        <div class="input-group">
+         <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+         <input type="text" class="form-control" name="username" id="username" placeholder="Enter your Username" required>
+        </div>
+       </div>
+      </div>
+       
+       <div class="form-group">
+       <label for="password" class="cols-sm-2 control-label">Password</label>
+       <div class="cols-sm-10">
+        <div class="input-group">
+         <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+         <input type="password" class="form-control" name="password" placeholder="Password" id="password" required  placeholder="Enter your Password"/>
+        </div>
+       </div>
+      </div>
+ 
+       
+
+    <input type="checkbox" value="checked"><b>Remember</b>
+    <input type="submit" value="Login" class="form-control btn btn-success " name="">
+   </form>
+   <div id="msg">{{ msg }}</div>
+   <p>No account <a href="{{ url_for('register') }}">Register</a></p>
+  </div>
+ </div>
+ </body>
+</html>

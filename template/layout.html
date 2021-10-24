@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ </head>
+ 
+
+
+
+  
+  
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h1{
+    color:'white';
+    font-family:arial,sans-serif;
+    font-size:50px;
+    font-weight:bold;
+    margin-top:10px;
+    }
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 900px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-top:1px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 21px;
+  color: #818181;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+
+
+   body{
+   
+        background-image:url('/static/img/43412802-medicine-concept-stethoscope-pills-with-syringe-and-thermometer.jpg');
+        background-repeat:no-repeat;
+        background attachment:fixed;
+        background-size:cover;
+        }
+    input[type=submit]{
+        background-color:#DE3163;
+        border:2px;
+        color:white;
+        padding:16px 32px;
+        cursor:pointer;
+        margin-top:85px;
+        }
+
+    input[type=submit]{
+        background-color:#DE3163;
+        border:2px;
+        color:white;
+        padding:16px 32px;
+        cursor:pointer;
+        margin-top:70px;
+        }
+</style>
+</head>
+
+
+
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="{{ url_for('abv') }}">About</a>
+  <a href="{{ url_for('info') }}">information</a>
+  <a href="{{ url_for('awareness') }}"> Diabetes Awareness</a>
+  <a href="{{ url_for('dbpre') }}">Diabetes Prevalence</a>
+  <a href="{{ url_for('awarenessbp') }}"> bloodpressure Awareness</a>
+  <a href="{{ url_for('bppre') }}">bloodpressure Prevalence</a>
+  <a href="{{ url_for('bp') }}">blood pressure ratio</a>
+  <a href="{{ url_for('diabetes') }}">diabetes ratio</a>
+  <a href="{{ url_for('coviddata') }}">covid-19 death rate</a>
+  <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt">Logout</a>
+  
+</div>
+
+<button class="openbtn" onclick="openNav()">☰ </button> 
+ 
+
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+<body>
+<div align="center">
+    <h1>
+        WELCOME TO DIABETES AND BLOOD PRESSURE PREDICTION SYSTEM
+    </h1>
+    <form action = "indexdb">
+        <input type="submit" value="lets predict Diabetes">
+        </form>
+        
+    <form action = "indexbp">
+        <input type="submit" value="lets predict Blood Pressure">
+        </form>
+  <div align="center">
+    <h3>
+        NOTE:-If you dont know how to put information then go and check information in toggle button
+    </h3>      
+        
+   </div>
+</body>    
+      </div>
+    </div>
+  
+ </body>
+</html>
